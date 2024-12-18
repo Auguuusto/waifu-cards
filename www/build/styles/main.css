@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", monospace;
+}
+
+body {
+  background-color: #fc5c65;
+  color: white;
+  display: flex;
+}
+body img {
+  position: fixed;
+  height: 100%;
+  z-index: -1;
+}
+
+#wallpaperRight {
+  left: 60%;
+}
+
+.container {
+  max-width: 1023px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(235, 59, 90, 0.7);
+  height: 100000px;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  font-size: 7vw;
+}
+header h3 {
+  font-size: 3vw;
+  position: absolute;
+  top: 6vw;
+  left: 50.45vw;
+}
+
+nav {
+  margin: 25px 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 4px;
+  margin: 10px;
+}
+main img {
+  position: static;
+  height: auto;
+  width: 100%;
+}
+main #bronze {
+  border: 1px #fd9644;
+}
+main #diamante {
+  border: 1px #45aaf2;
+}
+
+footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 20vw;
+  }
+  header h3 {
+    top: 17vw;
+    left: 51.5vw;
+    font-size: 8.5vw;
+  }
+  main {
+    grid-template-columns: auto auto;
+  }
+  footer {
+    font-size: 3vw;
+  }
+  #wallpaperRight {
+    visibility: hidden;
+  }
+  body img {
+    z-index: -1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
