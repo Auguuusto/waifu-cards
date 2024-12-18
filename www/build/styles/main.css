@@ -28,7 +28,7 @@ body img {
   justify-content: center;
   background-color: #fc5c65;
   z-index: 100;
-  transition: opacity 1s, visibility 1s;
+  transition: opacity 1.75s, visibility 1.75s;
 }
 .loader .logo {
   display: flex;
