@@ -94,13 +94,16 @@ footer {
   .loader .logo h1, .loader .logo h3 {
     font-size: 14vw;
   }
+  header {
+    padding: 20px;
+  }
   header h1 {
     font-size: 20vw;
     padding-bottom: 20px;
   }
   header h3 {
-    top: 20vw;
-    left: 51.5vw;
+    top: 25vw;
+    left: 51.6vw;
     font-size: 8.5vw;
   }
   main {
