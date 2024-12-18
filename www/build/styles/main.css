@@ -13,7 +13,7 @@ body {
 }
 body img {
   position: fixed;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
 }
 
@@ -34,35 +34,29 @@ header {
 }
 header h1 {
   font-size: 7vw;
+  padding: 10px;
+  padding-bottom: 20px;
 }
 header h3 {
   font-size: 3vw;
   position: absolute;
-  top: 6vw;
+  top: 6.35vw;
   left: 50.45vw;
-}
-
-nav {
-  margin: 25px 10px;
 }
 
 main {
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 10px;
-  row-gap: 4px;
+  row-gap: 50px;
   margin: 10px;
+  position: static;
 }
 main img {
   position: static;
   height: auto;
   width: 100%;
-}
-main #bronze {
-  border: 1px #fd9644;
-}
-main #diamante {
-  border: 1px #45aaf2;
+  pointer-events: none;
 }
 
 footer {
@@ -74,7 +68,7 @@ footer {
     font-size: 20vw;
   }
   header h3 {
-    top: 17vw;
+    top: 20vw;
     left: 51.5vw;
     font-size: 8.5vw;
   }
