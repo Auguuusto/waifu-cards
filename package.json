@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass www/source/styles/main.scss www/build/styles/main.css --watch",
-    "gulp": "gulp",
+    "dev": "gulp watch",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
-    "sass": "^1.83.0"
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.83.4"
   }
 }

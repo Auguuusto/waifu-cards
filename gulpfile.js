@@ -1,8 +1,20 @@
-const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
-gulp.task('imagemin', () => {
- return gulp.src('www/source/images/*').pipe(imagemin()).pipe(gulp.dest('www/build/images/waifus'));
-});
+function styles() {
+ return gulp.src('./www/src/styles/*.scss')
+ .pipe(sass({outputStyle: 'compressed'}))
+ .pipe(gulp.dest('./www/dist/styles'));
+}
 
-gulp.task('default', gulp.series('imagemin'));
+function images() {
+ return gulp.src('./www/src/images/**/*')
+ .pipe(imagemin())
+ .pipe(gulp.dest('./www/dist/images'));
+}
+
+exports.default = gulp.parallel(styles, images);
+exports.watch = function() {
+ gulp.watch('./www/src/styles/*.scss', gulp.parallel(styles))
+}
