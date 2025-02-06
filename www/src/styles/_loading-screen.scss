@@ -1,0 +1,27 @@
+@use 'variables';
+
+.loader {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: variables.$corPrimaria;
+ z-index: 100;
+ transition: opacity 1.75s, visibility 1.75s;
+ &--hidden {
+  opacity: 0;
+  visibility: hidden;
+ }
+ &__logo {
+  display: flex;
+  text-align: center;
+  top: 50%;
+ }
+ h1, h3 {
+  font-size: 6vw;
+ }
+}

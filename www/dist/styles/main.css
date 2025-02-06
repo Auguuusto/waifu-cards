@@ -1,58 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "League Spartan", monospace;
-}
-
-body {
-  background-color: #fc5c65;
-  color: white;
-  display: flex;
-}
-body img {
-  position: fixed;
-  height: 100vh;
-  z-index: -1;
-}
-
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fc5c65;
-  z-index: 100;
-  transition: opacity 1.75s, visibility 1.75s;
-}
-.loader .logo {
-  display: flex;
+footer {
   text-align: center;
-  top: 50%;
-}
-.loader .logo h1, .loader .logo h3 {
-  font-size: 6vw;
-}
-
-.loader--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-#wallpaperRight {
-  left: 60%;
-}
-
-.container {
-  max-width: 1023px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: rgba(235, 59, 90, 0.7);
+  margin: 20px 0;
 }
 
 header {
@@ -70,6 +19,51 @@ header h3 {
   left: 50.45vw;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fc5c65;
+  z-index: 100;
+  transition: opacity 1.75s, visibility 1.75s;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader__logo {
+  display: flex;
+  text-align: center;
+  top: 50%;
+}
+.loader h1, .loader h3 {
+  font-size: 6vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", monospace;
+}
+
+body {
+  background-color: #fc5c65;
+  color: white;
+  display: flex;
+  transition: background-color 0.5s ease;
+}
+body img {
+  position: fixed;
+  height: 100vh;
+  z-index: -1;
+}
+
 main {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -85,9 +79,15 @@ main img {
   pointer-events: none;
 }
 
-footer {
-  text-align: center;
-  margin: 20px 0;
+#wallpaperRight {
+  left: 60%;
+}
+
+.container {
+  max-width: 1023px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(235, 59, 90, 0.7);
 }
 
 @media screen and (max-width: 767px) {
@@ -119,4 +119,31 @@ footer {
   body img {
     z-index: -1;
   }
+}
+.card {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  background-size: cover;
+  position: relative;
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
+}
+.card img {
+  border-radius: 5px;
+  height: 100%;
+}
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.2666666667);
+  cursor: pointer;
+}
+.card__glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.1333333333), rgba(0, 0, 0, 0.0588235294));
 }
